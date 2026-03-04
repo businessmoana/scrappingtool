@@ -12,6 +12,8 @@ const defaultConfig = {
   startPage: 1,
   /** Max number of search pages to scrape per location (e.g. 100; can be smaller if location has fewer results) */
   maxPagesPerLocation: 100,
+  /** Max number of profile pages to scrape in parallel per search page (recommended: 2–4 to avoid rate limits) */
+  profileConcurrency: 4,
   /** Delay in ms between requests (search + profile) */
   delayBetweenRequests: 2000,
   /** Directory for output files and progress */
@@ -32,7 +34,7 @@ function parseArgs() {
   for (const arg of process.argv.slice(2)) {
     if (arg.startsWith('--') && arg.includes('=')) {
       const [key, value] = arg.slice(2).split('=');
-      const numKeys = ['startPage', 'maxPagesPerLocation', 'delayBetweenRequests', 'maxRetries', 'initialBackoffMs'];
+      const numKeys = ['startPage', 'maxPagesPerLocation', 'profileConcurrency', 'delayBetweenRequests', 'maxRetries', 'initialBackoffMs'];
       overrides[key] = numKeys.includes(key) ? parseInt(value, 10) : value;
       if (key === 'usePuppeteer') overrides[key] = value === 'true' || value === '1';
     }

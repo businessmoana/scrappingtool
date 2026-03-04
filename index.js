@@ -71,6 +71,51 @@ async function processOneProfile(profileUrl, config) {
   return row;
 }
 
+/**
+ * Process a page's profiles with limited concurrency.
+ */
+async function processProfilesForPage(todo, {
+  config,
+  locIndex,
+  pageNum,
+  results,
+  processedUrls,
+  outputDirectory,
+}) {
+  const { delayBetweenRequests, profileConcurrency } = config;
+  const concurrency = Math.max(1, Number.isInteger(profileConcurrency) ? profileConcurrency : 1);
+  let index = 0;
+
+  async function worker(workerId) {
+    // Simple work-stealing loop
+    // eslint-disable-next-line no-constant-condition
+    while (true) {
+      const current = index;
+      if (current >= todo.length) break;
+      index += 1;
+
+      const profileUrl = todo[current];
+      const username = (profileUrl.match(/github\.com\/([^/]+)/) || [])[1] || profileUrl;
+      log(`  [w${workerId}] Processing user ${current + 1}/${todo.length}: ${username}...`);
+
+      const row = await processOneProfile(profileUrl, config);
+      results.push(row);
+      processedUrls.add(profileUrl);
+      saveProgress(outputDirectory, results, { locationIndex: locIndex, pageNum });
+
+      if (current < todo.length - 1) {
+        await delay(delayBetweenRequests);
+      }
+    }
+  }
+
+  const workers = [];
+  for (let w = 0; w < concurrency; w++) {
+    workers.push(worker(w + 1));
+  }
+  await Promise.all(workers);
+}
+
 async function main() {
   const config = loadConfig();
   const {
@@ -130,18 +175,14 @@ async function main() {
       }
 
       const todo = pageLinks.filter((url) => !processedUrls.has(url));
-      for (let i = 0; i < todo.length; i++) {
-        const profileUrl = todo[i];
-        const username = (profileUrl.match(/github\.com\/([^/]+)/) || [])[1] || profileUrl;
-        log(`  Processing user ${i + 1}/${todo.length}: ${username}...`);
-
-        const row = await processOneProfile(profileUrl, config);
-        results.push(row);
-        processedUrls.add(profileUrl);
-        saveProgress(outputDirectory, results, { locationIndex: locIndex, pageNum });
-
-        if (i < todo.length - 1) await delay(delayBetweenRequests);
-      }
+      await processProfilesForPage(todo, {
+        config,
+        locIndex,
+        pageNum,
+        results,
+        processedUrls,
+        outputDirectory,
+      });
 
       if (pageNum < lastPagePerLocation) await delay(delayBetweenRequests);
     }
