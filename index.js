@@ -162,8 +162,8 @@ async function main() {
       log(`  Scraping page ${pageNum}...`);
 
       let pageLinks = [];
-      log("location=>",location);
-      log("pageNum=>",pageNum);
+      log(`location=>${location}`);
+      log(`pageNum=>${pageNum}`);
       try {
         const searchUrl = getSearchUrl(location, pageNum);
         const html = await fetchHtml(searchUrl, {
@@ -171,7 +171,7 @@ async function main() {
           initialBackoffMs: config.initialBackoffMs,
         });
         pageLinks = getLinksFromPage(html);
-        log("searchUrl=>",searchUrl);
+        log(`searchUrl=>${searchUrl}`);
         log(`  Found ${pageLinks.length} users.`);
       } catch (err) {
         log(`  Error fetching search page: ${err.message}`);
