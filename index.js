@@ -163,6 +163,8 @@ async function main() {
 
       let pageLinks = [];
       try {
+        log("location=>",location);
+        log("pageNum=>",pageNum);
         const searchUrl = getSearchUrl(location, pageNum);
         const html = await fetchHtml(searchUrl, {
           maxRetries: config.maxRetries,
