@@ -114,6 +114,11 @@ async function processProfilesForPage(todo, {
     workers.push(worker(w + 1));
   }
   await Promise.all(workers);
+
+  const startLen = results.length - todo.length;
+  const pageResults = results.slice(startLen);
+  const withEmail = pageResults.filter((r) => r.email).length;
+  return { processed: todo.length, withEmail };
 }
 
 async function main() {
@@ -173,9 +178,13 @@ async function main() {
       } catch (err) {
         log(`  Error fetching search page: ${err.message}`);
       }
-      log(`pageLinks=>${pageLinks}`);
       const todo = pageLinks.filter((url) => !processedUrls.has(url));
-      await processProfilesForPage(todo, {
+      if (todo.length === 0) {
+        log(`  All ${pageLinks.length} already processed; skipping.`);
+      } else {
+        log(`  Processing ${todo.length} new profile(s)...`);
+      }
+      const pageStats = await processProfilesForPage(todo, {
         config,
         locIndex,
         pageNum,
@@ -183,6 +192,9 @@ async function main() {
         processedUrls,
         outputDirectory,
       });
+      if (pageStats.processed > 0) {
+        log(`  Page ${pageNum} done: ${pageStats.processed} profile(s), ${pageStats.withEmail} with email.`);
+      }
 
       if (pageNum < lastPagePerLocation) await delay(delayBetweenRequests);
     }
