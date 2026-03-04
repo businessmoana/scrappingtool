@@ -169,6 +169,7 @@ async function main() {
           initialBackoffMs: config.initialBackoffMs,
         });
         pageLinks = getLinksFromPage(html);
+        log("searchUrl=>",searchUrl);
         log(`  Found ${pageLinks.length} users.`);
       } catch (err) {
         log(`  Error fetching search page: ${err.message}`);
