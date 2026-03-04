@@ -1,0 +1,20 @@
+{
+  "name": "github-email-scraper",
+  "version": "1.0.0",
+  "description": "Production-ready tool to scrape email addresses from GitHub user profiles",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "scrape": "node index.js"
+  },
+  "keywords": ["github", "scraper", "email"],
+  "license": "MIT",
+  "engines": {
+    "node": ">=16.0.0"
+  },
+  "dependencies": {
+    "axios": "^1.6.2",
+    "cheerio": "^1.0.0-rc.12",
+    "puppeteer": "^21.6.1"
+  }
+}

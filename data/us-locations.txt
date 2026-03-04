@@ -1,0 +1,300 @@
+San Francisco, CA
+New York, NY
+Los Angeles, CA
+Chicago, IL
+Houston, TX
+Phoenix, AZ
+Philadelphia, PA
+San Antonio, TX
+San Diego, CA
+Dallas, TX
+San Jose, CA
+Austin, TX
+Jacksonville, FL
+Fort Worth, TX
+Columbus, OH
+Charlotte, NC
+San Francisco Bay Area, CA
+Seattle, WA
+Denver, CO
+Boston, MA
+Nashville, TN
+Portland, OR
+Las Vegas, NV
+Detroit, MI
+Miami, FL
+Atlanta, GA
+Raleigh, NC
+Minneapolis, MN
+Cleveland, OH
+Salt Lake City, UT
+Tampa, FL
+Pittsburgh, PA
+Washington, DC
+Orlando, FL
+Sacramento, CA
+Kansas City, MO
+Indianapolis, IN
+Milwaukee, WI
+Baltimore, MD
+Austin, TX
+Brooklyn, NY
+Oakland, CA
+Palo Alto, CA
+Mountain View, CA
+Sunnyvale, CA
+Santa Clara, CA
+San Jose, CA
+Cambridge, MA
+Somerville, MA
+Berkeley, CA
+Redmond, WA
+Bellevue, WA
+Irvine, CA
+San Diego, CA
+Denver, CO
+Seattle, WA
+Boston, MA
+Chicago, IL
+Austin, TX
+Providence, RI
+Hartford, CT
+New Haven, CT
+Stamford, CT
+Buffalo, NY
+Rochester, NY
+Syracuse, NY
+Albany, NY
+Manchester, NH
+Portland, ME
+Burlington, VT
+Newark, NJ
+Jersey City, NJ
+Paterson, NJ
+Bridgeport, CT
+Richmond, VA
+Virginia Beach, VA
+Norfolk, VA
+Arlington, VA
+Alexandria, VA
+Wilmington, DE
+Dover, DE
+Annapolis, MD
+Columbia, MD
+Frederick, MD
+Hagerstown, MD
+Reading, PA
+Lancaster, PA
+Scranton, PA
+Allentown, PA
+Erie, PA
+Harrisburg, PA
+Birmingham, AL
+Huntsville, AL
+Montgomery, AL
+Mobile, AL
+Little Rock, AR
+Fayetteville, AR
+Charleston, SC
+Columbia, SC
+Greenville, SC
+Myrtle Beach, SC
+Savannah, GA
+Augusta, GA
+Macon, GA
+Athens, GA
+Louisville, KY
+Lexington, KY
+Frankfort, KY
+Knoxville, TN
+Memphis, TN
+Chattanooga, TN
+Jackson, MS
+Gulfport, MS
+New Orleans, LA
+Baton Rouge, LA
+Shreveport, LA
+Lafayette, LA
+St. Petersburg, FL
+Fort Lauderdale, FL
+Hollywood, FL
+Hialeah, FL
+Cape Coral, FL
+Port St. Lucie, FL
+Pensacola, FL
+Tallahassee, FL
+Gainesville, FL
+Sarasota, FL
+Naples, FL
+Cincinnati, OH
+Toledo, OH
+Akron, OH
+Dayton, OH
+Youngstown, OH
+South Bend, IN
+Fort Wayne, IN
+Evansville, IN
+Gary, IN
+Grand Rapids, MI
+Warren, MI
+Sterling Heights, MI
+Ann Arbor, MI
+Lansing, MI
+Flint, MI
+Madison, WI
+Green Bay, WI
+Kenosha, WI
+Racine, WI
+Des Moines, IA
+Cedar Rapids, IA
+Davenport, IA
+Sioux City, IA
+Omaha, NE
+Lincoln, NE
+Wichita, KS
+Topeka, KS
+Overland Park, KS
+St. Louis, MO
+Springfield, MO
+Jefferson City, MO
+Fargo, ND
+Bismarck, ND
+Sioux Falls, SD
+Rapid City, SD
+Rochester, MN
+Duluth, MN
+Albuquerque, NM
+Santa Fe, NM
+Las Cruces, NM
+Tucson, AZ
+Mesa, AZ
+Chandler, AZ
+Glendale, AZ
+Scottsdale, AZ
+Gilbert, AZ
+Tempe, AZ
+Oklahoma City, OK
+Tulsa, OK
+Norman, OK
+El Paso, TX
+Corpus Christi, TX
+Plano, TX
+Lubbock, TX
+Laredo, TX
+Garland, TX
+Irving, TX
+Amarillo, TX
+Grand Prairie, TX
+Brownsville, TX
+McKinney, TX
+Frisco, TX
+Pasadena, TX
+Killeen, TX
+Waco, TX
+Denton, TX
+Mesquite, TX
+Midland, TX
+Odessa, TX
+Round Rock, TX
+Richardson, TX
+Lewisville, TX
+College Station, TX
+Tyler, TX
+Boulder, CO
+Fort Collins, CO
+Colorado Springs, CO
+Aurora, CO
+Lakewood, CO
+Greeley, CO
+Pueblo, CO
+Boise, ID
+Meridian, ID
+Idaho Falls, ID
+Billings, MT
+Missoula, MT
+Butte, MT
+Cheyenne, WY
+Casper, WY
+Provo, UT
+Ogden, UT
+St. George, UT
+Reno, NV
+Henderson, NV
+North Las Vegas, NV
+Sparks, NV
+Flagstaff, AZ
+Prescott, AZ
+Yuma, AZ
+Vancouver, WA
+Spokane, WA
+Tacoma, WA
+Olympia, WA
+Bellingham, WA
+Everett, WA
+Kent, WA
+Renton, WA
+Federal Way, WA
+Auburn, WA
+Salem, OR
+Eugene, OR
+Gresham, OR
+Hillsboro, OR
+Beaverton, OR
+Bend, OR
+Medford, OR
+Corvallis, OR
+Fremont, CA
+Hayward, CA
+Concord, CA
+Santa Rosa, CA
+Vallejo, CA
+Richmond, CA
+Antioch, CA
+Long Beach, CA
+Glendale, CA
+Santa Clarita, CA
+Lancaster, CA
+Palmdale, CA
+Pomona, CA
+Torrance, CA
+Pasadena, CA
+Orange, CA
+Fullerton, CA
+Costa Mesa, CA
+Huntington Beach, CA
+Garden Grove, CA
+Chula Vista, CA
+Oceanside, CA
+Escondido, CA
+Carlsbad, CA
+Vista, CA
+San Marcos, CA
+Fresno, CA
+Bakersfield, CA
+Stockton, CA
+Modesto, CA
+Visalia, CA
+Merced, CA
+Turlock, CA
+Santa Barbara, CA
+Santa Maria, CA
+San Luis Obispo, CA
+Monterey, CA
+Salinas, CA
+Watsonville, CA
+Riverside, CA
+San Bernardino, CA
+Fontana, CA
+Moreno Valley, CA
+Rancho Cucamonga, CA
+Ontario, CA
+Corona, CA
+Victorville, CA
+Murrieta, CA
+Temecula, CA
+Elk Grove, CA
+Roseville, CA
+Folsom, CA
+Citrus Heights, CA
+Rocklin, CA
+McAllen, TX
