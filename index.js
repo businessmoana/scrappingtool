@@ -162,9 +162,9 @@ async function main() {
       log(`  Scraping page ${pageNum}...`);
 
       let pageLinks = [];
+      log("location=>",location);
+      log("pageNum=>",pageNum);
       try {
-        log("location=>",location);
-        log("pageNum=>",pageNum);
         const searchUrl = getSearchUrl(location, pageNum);
         const html = await fetchHtml(searchUrl, {
           maxRetries: config.maxRetries,
