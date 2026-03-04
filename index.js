@@ -177,6 +177,8 @@ async function main() {
         log(`  Found ${pageLinks.length} users.`);
       } catch (err) {
         log(`  Error fetching search page: ${err.message}`);
+        log(`  Skipping remaining pages for this location.`);
+        break;
       }
       const todo = pageLinks.filter((url) => !processedUrls.has(url));
       if (todo.length === 0) {
