@@ -178,11 +178,14 @@ async function main() {
       } catch (err) {
         log(`  Error fetching search page: ${err.message}`);
         log(`  Skipping remaining pages for this location.`);
+        saveProgress(outputDirectory, results, { locationIndex: locIndex + 1, pageNum: startPage });
         break;
       }
       const todo = pageLinks.filter((url) => !processedUrls.has(url));
       if (todo.length === 0) {
         log(`  All ${pageLinks.length} already processed; skipping.`);
+        const nextPage = pageNum + 1;
+        saveProgress(outputDirectory, results, { locationIndex: locIndex, pageNum: nextPage });
       } else {
         log(`  Processing ${todo.length} new profile(s)...`);
       }
