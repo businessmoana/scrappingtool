@@ -51,7 +51,6 @@ Berkeley, CA
 Redmond, WA
 Bellevue, WA
 Irvine, CA
-San Diego, CA
 Denver, CO
 Seattle, WA
 Boston, MA
